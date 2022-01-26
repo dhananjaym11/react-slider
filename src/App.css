@@ -1,38 +1,66 @@
-.App {
+*  {
+  padding: 0;
+  margin: 0;
+}
+.image-slider {
+  position: relative;
+}
+.slider-item {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+.slider-item img {
+  display: block;
+  max-width: 100%;
+}
+.slider-item h3 {
+  position: absolute;
+  width: 100%;
   text-align: center;
+  top: 50%;
+  font-size: 30px;
+  color: #fff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slider-item h3 span {
+  padding: 10px 20px;
+  display: inline-block;
+  background: rgba(0,0,0,.5);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 30px;
+  text-align: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slider-btn img {
+  width: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.slider-btn.btn-next {
+  left: auto;
+  right: 15px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider-dots {
+  list-style: none;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+}
+.slider-dots li {
+  display: inline-block;
+  background: #999;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.slider-dots li.active {
+  background: #333;
 }

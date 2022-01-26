@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import ImageSlider from './component/ImageSlider';
+import one from './images/1.jpg';
+import two from './images/2.jpg';
+import three from './images/3.jpg';
+import four from './images/4.jpg';
 
 function App() {
+  const images = [
+    { image: one, text: 'Banner One' },
+    { image: two, text: 'Banner Two' },
+    { image: three, text: 'Banner Three' },
+    { image: four, text: 'Banner Four' },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page">
+      <ImageSlider images={images} />
     </div>
   );
 }
